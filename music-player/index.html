@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee9df">
+  <meta name="description" content="A cozy little music player with a sample playlist.">
+  <title>Side A — A little music player</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="player-page">
+    <header class="player-topbar"><a class="back-link" href="../index.html"><span aria-hidden="true">←</span> BACK TO ELSEWHERE</a><a class="player-brand" href="#top"><span class="brand-icon">◖</span> SIDE A</a><span class="top-note">A LITTLE MUSIC PLAYER</span></header>
+    <section class="player-layout" id="top" aria-label="Music player">
+      <div class="player-main">
+        <div class="album-art" id="album-art" role="img" aria-label="Abstract album artwork">
+          <div class="art-sun"></div><div class="art-ring ring-one"></div><div class="art-ring ring-two"></div><div class="art-shape"></div><span class="art-label">SIDE A<br><b>VOL. 01</b></span><span class="art-sticker">PLAY<br>IT SLOW</span>
+        </div>
+        <div class="now-playing-label"><span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span> NOW PLAYING <span class="track-index">01 / 03</span></div>
+        <div class="track-heading"><div><h1 class="track-title">Golden Hour</h1><p class="track-artist">SoundHelix Demo</p></div><button class="like-button" type="button" aria-label="Like this track" aria-pressed="false">♡</button></div>
+        <audio id="audio" preload="metadata"></audio>
+        <div class="timeline"><span class="elapsed-time">0:00</span><label class="visually-hidden" for="seek">Track position</label><input id="seek" class="range seek-range" type="range" min="0" max="1000" value="0"><span class="duration-time">0:00</span></div>
+        <div class="transport">
+          <button class="icon-button shuffle-button" type="button" aria-label="Toggle shuffle" aria-pressed="false">⤨</button>
+          <button class="icon-button" id="previous" type="button" aria-label="Previous track">|◀</button>
+          <button class="play-button" id="play" type="button" aria-label="Play">▶</button>
+          <button class="icon-button" id="next" type="button" aria-label="Next track">▶|</button>
+          <button class="icon-button repeat-button" type="button" aria-label="Toggle repeat" aria-pressed="false">↻</button>
+        </div>
+        <div class="volume-row"><span aria-hidden="true">◖</span><label class="visually-hidden" for="volume">Volume</label><input id="volume" class="range volume-range" type="range" min="0" max="100" value="72"><span aria-hidden="true">◗</span><button class="autoplay-button" type="button" aria-pressed="true"><span class="autoplay-dot"></span> AUTOPLAY</button></div>
+        <p class="player-status" aria-live="polite"></p>
+      </div>
+
+      <aside class="playlist-panel" aria-label="Playlist">
+        <div class="playlist-heading"><div><p class="eyebrow">YOUR LITTLE MIX</p><h2>On repeat <span>↗</span></h2></div><span class="playlist-count">03 TRACKS</span></div>
+        <div class="track-list" role="list">
+          <button class="playlist-track is-current" type="button" data-track="0" role="listitem"><span class="list-number">01</span><span class="track-thumb thumb-one" aria-hidden="true"><i></i></span><span class="list-copy"><strong>Golden Hour</strong><small>SoundHelix Demo</small></span><span class="list-duration" data-duration="0">--:--</span></button>
+          <button class="playlist-track" type="button" data-track="1" role="listitem"><span class="list-number">02</span><span class="track-thumb thumb-two" aria-hidden="true"><i></i></span><span class="list-copy"><strong>Window Seat</strong><small>SoundHelix Demo</small></span><span class="list-duration" data-duration="1">--:--</span></button>
+          <button class="playlist-track" type="button" data-track="2" role="listitem"><span class="list-number">03</span><span class="track-thumb thumb-three" aria-hidden="true"><i></i></span><span class="list-copy"><strong>Soft Landing</strong><small>SoundHelix Demo</small></span><span class="list-duration" data-duration="2">--:--</span></button>
+        </div>
+        <div class="playlist-note"><span class="note-star">✳</span><p>A small collection for slow mornings, long walks, and everything in between.</p></div>
+        <div class="playlist-footer"><span>HANDPICKED FOR YOUR DAY</span><span>NO. 001</span></div>
+      </aside>
+    </section>
+    <footer class="page-footer"><span>TAKE YOUR TIME.</span><a href="../index.html">EXPLORE THE PHOTO JOURNAL ↗</a></footer>
+  </main>
+</body>
+</html>
